@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -27,6 +28,25 @@ public class ArrayListMethods {
                 .filter(item -> item % 2 == 0)
                 .collect(Collectors.toList());
         System.out.println(filtered);
+
+        Collections.sort(list); // Ascending
+        // Collections.sort(list, Collections.reverseOrder()); // Descending
+
+        int idx = list.indexOf(1); // Get index of element
+        boolean found = list.contains(1); // Search for element
+
+        System.out.println(list);
+        System.out.println(idx);
+        System.out.println(found);
+
+        // list.removeIf(item -> item % 2 == 0);
+        // System.out.println(list);
+
+        // list.addAll(list);
+        // System.out.println(list); add new list
+
+        int sum = list.stream().mapToInt(i -> i).sum();
+        System.out.println(sum);
 
     }
 }
