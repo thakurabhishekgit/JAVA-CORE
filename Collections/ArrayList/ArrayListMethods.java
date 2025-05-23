@@ -48,5 +48,31 @@ public class ArrayListMethods {
         int sum = list.stream().mapToInt(i -> i).sum();
         System.out.println(sum);
 
+        int max = Collections.max(list);
+        System.out.println(max);
+
+        int min = Collections.min(list);
+        System.out.println(min);
+
+        list.set(1, 10);
+        System.out.println(list);
+
+        list.forEach(System.out::println);
+
+        list.replaceAll(item -> item * 2);
+        System.out.println(list);
+
+        list.sort(Collections.reverseOrder());
+        System.out.println(list);
+
+        list.sort(null);
+        System.out.println(list);
+
+        for (int val : list.subList(0, 2)) {
+            System.out.println(val);
+        }
+
+        System.out.println(list.subList(0, 2));
+
     }
 }
