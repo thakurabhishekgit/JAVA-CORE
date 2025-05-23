@@ -1,0 +1,9 @@
+| Goal                     | Use              |
+| ------------------------ | ---------------- |
+| Remove some values       | `filter()`       |
+| Convert/transform values | `map()`          |
+| Count how many           | `count()`        |
+| Find max/min             | `max()`, `min()` |
+| Remove duplicates        | `distinct()`     |
+| Sort items               | `sorted()`       |
+| Build new list/map       | `collect()`      |
