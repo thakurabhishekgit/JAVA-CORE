@@ -1,0 +1,21 @@
+| **Python List**           | **Java ArrayList**                                   | **Use / Purpose**       |
+| ------------------------- | ---------------------------------------------------- | ----------------------- |
+| `append(x)`               | `list.add(x)`                                        | Add element at end      |
+| `insert(i, x)`            | `list.add(i, x)`                                     | Add at index            |
+| `list[i]`                 | `list.get(i)`                                        | Get element             |
+| `list[i] = x`             | `list.set(i, x)`                                     | Update value            |
+| `del list[i]`             | `list.remove(i)`                                     | Remove at index         |
+| `list.remove(x)`          | `list.remove(Object x)`                              | Remove first occurrence |
+| `x in list`               | `list.contains(x)`                                   | Check if exists         |
+| `len(list)`               | `list.size()`                                        | Length                  |
+| `list.pop()`              | `list.remove(list.size() - 1)`                       | Pop last                |
+| `list.pop(i)`             | `list.remove(i)`                                     | Pop at index            |
+| `list.clear()`            | `list.clear()`                                       | Remove all elements     |
+| `list.index(x)`           | `list.indexOf(x)`                                    | First index of x        |
+| `list.count(x)`           | `Collections.frequency(list, x)`                     | Count occurrences       |
+| `list.sort()`             | `Collections.sort(list)`                             | Ascending sort          |
+| `list.sort(reverse=True)` | `Collections.sort(list, Collections.reverseOrder())` | Descending sort         |
+| `list[::-1]`              | `Collections.reverse(list)`                          | Reverse the list        |
+| `min(list)`               | `Collections.min(list)`                              | Minimum value           |
+| `max(list)`               | `Collections.max(list)`                              | Maximum value           |
+| `sum(list)`               | `list.stream().mapToInt(i -> i).sum()`               | Sum (Java 8+)           |
