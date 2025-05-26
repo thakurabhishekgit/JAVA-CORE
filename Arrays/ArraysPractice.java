@@ -75,14 +75,22 @@ public class ArraysPractice {
 
     // 2. Frequency count
     public static void frequencyCount(int[] arr) {
-        Map<Integer, Integer> frequencyMap = new HashMap<>();
+        Map<Integer, Integer> map = new HashMap<>();
         for (int num : arr) {
-            frequencyMap.put(num, frequencyMap.getOrDefault(num, 0) + 1);
+            map.put(num, map.getOrDefault(num, 0) + 1);
         }
-        System.out.println("Frequency Count: " + frequencyMap);
-        for (Map.Entry<Integer, Integer> entry : frequencyMap.entrySet()) {
+        System.out.println("Frequency Count: " + map);
+        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
             System.out.println(entry.getKey() + " -> " + entry.getValue());
         }
+        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+            if (entry.getValue() > 1) {
+                System.out.println("Element " + entry.getKey() + " occurs " + entry.getValue() + " times.");
+            } else {
+                System.out.println("Element " + entry.getKey() + " occurs only once.");
+            }
+        }
+
     }
 
 }
