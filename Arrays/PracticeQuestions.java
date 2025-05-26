@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class PracticeQuestions {
     // [16, 17, 4, 3, 5, 2] → 17, 5, 2, 3, 4, 16
@@ -20,7 +21,12 @@ public class PracticeQuestions {
         // arr.stream().filter(x -> x % 2 != 0).forEach(System.out::println);
 
         int[] arr = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-        int[] sortedArray = Arrays.stream(arr).sorted().toArray();
+        // int[] sortedArray = Arrays.stream(arr).sorted().toArray();
+        String input[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" };
+        List<Integer> list = Arrays.stream(input)
+                .map(Integer::parseInt)
+                .toList();
+        System.out.println("List: " + list);
 
     }
 

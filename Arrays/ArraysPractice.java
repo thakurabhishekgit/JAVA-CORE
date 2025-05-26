@@ -24,15 +24,18 @@ public class ArraysPractice {
         System.out.println(" sum of array:" + Arrays.stream(arr).sum());
         System.out.println("Length of array: " + arr.length);
         Arrays.stream(arr).forEach(System.out::println);
-        System.out.println("aslist: " + Arrays.asList(arr).toString());
-        System.out.println("aslist with stream: " + Arrays.stream(arr).boxed().toList());
+
         System.out.println("Max: " + Arrays.stream(arr).max().getAsInt());
         System.out.println("Min: " + Arrays.stream(arr).min().getAsInt());
-        System.out.println("Average: " + Arrays.stream(arr).average().getAsDouble());
+        System.out.println("Average: " + (int) Arrays.stream(arr).average().orElse(0));
+        System.out.printf("Average: %.1f\n", Arrays.stream(arr).average().orElse(0.0));
+        System.out.println("Count: " + Arrays.stream(arr).count());
         System.out.println("Sum: " + Arrays.stream(arr).sum());
         System.out.println("Sorted: " + Arrays.stream(arr).sorted().boxed().toList());
         System.out.println("Distinct: " + Arrays.stream(arr).distinct().boxed().toList());
         System.out.println("Reversed: " + Arrays.stream(arr).boxed().sorted(Collections.reverseOrder()).toList());
+        Arrays.sort(arr);
+        System.out.println("Sorted array: " + Arrays.toString(arr));
 
         int maxx = Integer.MAX_VALUE;
         for (int i = 0; i < arr.length - 2; i++) {
@@ -52,6 +55,7 @@ public class ArraysPractice {
         int[] arrr = { 1, 2, 2, 3, 1, 4, 2 };
         reverseArray(arrr);
         System.out.println("Reversed array: " + Arrays.toString(arrr));
+
     }
     // 1. Reverse an array
 
