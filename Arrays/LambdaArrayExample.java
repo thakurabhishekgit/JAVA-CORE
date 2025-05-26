@@ -22,5 +22,8 @@ public class LambdaArrayExample {
         // Sum
         int sum = Arrays.stream(arr).sum();
         System.out.println("Sum: " + sum);
+
+        Arrays.stream(arr).map(x -> x * 2) // Double each element
+                .forEach(x -> System.out.print(x + " ")); // Print doubled elements
     }
 }
