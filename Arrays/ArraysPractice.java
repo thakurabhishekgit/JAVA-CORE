@@ -26,18 +26,45 @@ public class ArraysPractice {
         Arrays.stream(arr).forEach(System.out::println);
         System.out.println("aslist: " + Arrays.asList(arr).toString());
         System.out.println("aslist with stream: " + Arrays.stream(arr).boxed().toList());
-        System.out.println("Max: " + Arrays.stream(arr).max().orElseThrow());
-        System.out.println("Min: " + Arrays.stream(arr).min().orElseThrow());
-        System.out.println("Average: " + Arrays.stream(arr).average().orElseThrow());
+        System.out.println("Max: " + Arrays.stream(arr).max().getAsInt());
+        System.out.println("Min: " + Arrays.stream(arr).min().getAsInt());
+        System.out.println("Average: " + Arrays.stream(arr).average().getAsDouble());
         System.out.println("Sum: " + Arrays.stream(arr).sum());
         System.out.println("Sorted: " + Arrays.stream(arr).sorted().boxed().toList());
         System.out.println("Distinct: " + Arrays.stream(arr).distinct().boxed().toList());
         System.out.println("Reversed: " + Arrays.stream(arr).boxed().sorted(Collections.reverseOrder()).toList());
-        System.out.println(Collections.max(Arrays.stream(arr).boxed().toList()));
-        System.out.println(Collections.min(Arrays.stream(arr).boxed().toList()));
+
+        int maxx = Integer.MAX_VALUE;
+        for (int i = 0; i < arr.length - 2; i++) {
+            int[] range = Arrays.copyOfRange(arr, i, i + 3);
+            System.out.println("Copy Range: " + Arrays.toString(range));
+            int summ = Arrays.stream(range).sum();
+            maxx = Math.min(summ, maxx);
+        }
+        System.out.println("Max sum of any 3 consecutive elements: " + maxx);
+
+        // 1. Reverse an array
 
         // Frequency count
+        Arrays.sort(arr);
+        int index = Arrays.binarySearch(arr, 9);
+        System.out.println("Index of 30: " + index);
+        int[] arrr = { 1, 2, 2, 3, 1, 4, 2 };
+        reverseArray(arrr);
+        System.out.println("Reversed array: " + Arrays.toString(arrr));
+    }
+    // 1. Reverse an array
 
+    public static void reverseArray(int[] arr) {
+        int left = 0;
+        int right = arr.length - 1;
+        while (left < right) {
+            int temp = arr[left];
+            arr[left] = arr[right];
+            arr[right] = temp;
+            left++;
+            right--;
+        }
     }
 
 }
