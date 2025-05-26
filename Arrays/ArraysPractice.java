@@ -56,6 +56,8 @@ public class ArraysPractice {
         reverseArray(arrr);
         System.out.println("Reversed array: " + Arrays.toString(arrr));
 
+        frequencyCount(arrr);
+
     }
     // 1. Reverse an array
 
@@ -68,6 +70,18 @@ public class ArraysPractice {
             arr[right] = temp;
             left++;
             right--;
+        }
+    }
+
+    // 2. Frequency count
+    public static void frequencyCount(int[] arr) {
+        Map<Integer, Integer> frequencyMap = new HashMap<>();
+        for (int num : arr) {
+            frequencyMap.put(num, frequencyMap.getOrDefault(num, 0) + 1);
+        }
+        System.out.println("Frequency Count: " + frequencyMap);
+        for (Map.Entry<Integer, Integer> entry : frequencyMap.entrySet()) {
+            System.out.println(entry.getKey() + " -> " + entry.getValue());
         }
     }
 
