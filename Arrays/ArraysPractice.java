@@ -58,6 +58,8 @@ public class ArraysPractice {
 
         frequencyCount(arrr);
 
+        System.out.println("sh" + Arrays.stream(Arrays.copyOfRange(arr, 0, 3)).sum());
+
     }
     // 1. Reverse an array
 

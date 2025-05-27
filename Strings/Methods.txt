@@ -1,0 +1,19 @@
+| Method                            | Description                         | Example                    |
+| --------------------------------- | ----------------------------------- | -------------------------- |
+| `length()`                        | Get string length                   | `s.length()`               |
+| `charAt(int index)`               | Get character at index              | `s.charAt(0)`              |
+| `substring(int start, end)`       | Extract substring                   | `s.substring(1, 4)`        |
+| `contains(String)`                | Checks if string contains substring | `s.contains("abc")`        |
+| `indexOf(char/String)`            | First occurrence index              | `s.indexOf('a')`           |
+| `lastIndexOf(char/String)`        | Last occurrence index               | `s.lastIndexOf('a')`       |
+| `equals(String)`                  | Content equality                    | `s1.equals(s2)`            |
+| `equalsIgnoreCase(String)`        | Case-insensitive equality           | `s1.equalsIgnoreCase(s2)`  |
+| `toLowerCase()` / `toUpperCase()` | Case conversion                     | `s.toUpperCase()`          |
+| `trim()`                          | Removes leading/trailing spaces     | `s.trim()`                 |
+| `replace(char, char)`             | Replace characters                  | `s.replace('a','b')`       |
+| `replaceAll(regex, replacement)`  | Regex-based replace                 | `s.replaceAll("\\s+", "")` |
+| `split(String delimiter)`         | Split string                        | `s.split(" ")`             |
+| `join(delimiter, elements)`       | Join strings                        | `String.join(",", arr)`    |
+| `isEmpty()`                       | Check if string is empty            | `s.isEmpty()`              |
+| `compareTo(String)`               | Lexicographical comparison          | `s1.compareTo(s2)`         |
+| `toCharArray()`                   | Convert to char array               | `s.toCharArray()`          |
