@@ -81,6 +81,39 @@ public class StringMethods {
         // Find the last index of a character or substring
         int lastIndexOfO = str.lastIndexOf('o');
         System.out.println("Last index of 'o': " + lastIndexOfO);
+
+        String s = "abcdef";
+        s.substring(2); // "cdef"
+        s.substring(1, 4); // "bcd"
+        System.out.println("Substring from index 2: " + s.substring(2));
+        System.out.println("Substring from index 1 to 4: " + s.substring(1, 4));
+
+        String S = "madam";
+        String rev = new StringBuilder(S).reverse().toString();
+        if (s.equals(rev)) {
+            System.out.println("Palindrome");
+        } else {
+            System.out.println("Not a palindrome");
+        }
+
+        String sa = "apple,banana,grape";
+        String[] parts = sa.split(",");
+        System.out.println("Split string: " + Arrays.toString(parts));
+        StringBuilder sb = new StringBuilder();
+        for (String part : parts) {
+            sb.append(part).append(" ");
+        }
+        System.out.println("Joined string: " + sb.toString().trim());
+
+        String a1 = "listen";
+        String a2 = "silent";
+        char[] a = a1.toCharArray();
+        char[] b = a2.toCharArray();
+        Arrays.sort(a);
+        Arrays.sort(b);
+        boolean isAnagram = Arrays.equals(a, b);
+        System.out.println("Are '" + a1 + "' and '" + a2 + "' anagrams? " + isAnagram);
+
     }
 
 }
