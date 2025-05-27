@@ -2,6 +2,12 @@ import java.util.*;
 
 public class StringMethods {
     public static void main(String[] args) {
+
+        // Scanner sc = new Scanner(System.in);
+        // String line = sc.nextLine();
+        // String[] arr = line.split(" ");
+        // System.out.println("Input String: " + line);
+        // System.out.println("Split String: " + Arrays.toString(arr));
         String str = "Hello, World!";
 
         // Convert to uppercase
@@ -113,6 +119,23 @@ public class StringMethods {
         Arrays.sort(b);
         boolean isAnagram = Arrays.equals(a, b);
         System.out.println("Are '" + a1 + "' and '" + a2 + "' anagrams? " + isAnagram);
+
+        String dup = "programming";
+        Set<Character> set = new LinkedHashSet<>();
+        for (char chhh : dup.toCharArray())
+            set.add(chhh);
+        StringBuilder uniqueChars = new StringBuilder();
+        for (char chhh : set) {
+            uniqueChars.append(chhh);
+        }
+        System.out.println("Unique characters: " + uniqueChars.toString());
+
+        int num = Integer.parseInt("1234");
+        System.out.println("Integer value: " + num);
+
+        int numm = 5678;
+        String numStr = String.valueOf(numm);
+        System.out.println("String value: " + numStr);
 
     }
 
