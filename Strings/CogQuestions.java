@@ -94,7 +94,7 @@ public class CogQuestions {
                         'd', 4,
                         'e', 2));
         System.out.println("Frequency Map: " + frequencyMap);
-        String str = "abcde";
+        String str = "xabcdeg";
         String newString = "";
         for (char c : str.toCharArray()) {
             if (frequencyMap.containsKey(c)) {
@@ -105,6 +105,10 @@ public class CogQuestions {
         }
         System.out.println("New String: " + newString.trim());
 
+        // sort
+        char[] arr = str.toCharArray();
+        Arrays.sort(arr);
+        System.out.println("Sorted String: " + new String(arr));
     }
 
 }
