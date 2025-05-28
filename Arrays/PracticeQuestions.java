@@ -1,5 +1,5 @@
-import java.util.*;
-import java.util.stream.Collectors;
+// import java.util.*;
+// import java.util.stream.Collectors;
 
 public class PracticeQuestions {
     // [16, 17, 4, 3, 5, 2] → 17, 5, 2, 3, 4, 16
