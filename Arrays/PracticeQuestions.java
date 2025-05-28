@@ -20,14 +20,6 @@ public class PracticeQuestions {
         // arr.stream().filter(x -> x % 2 == 0).forEach(System.out::println);
         // arr.stream().filter(x -> x % 2 != 0).forEach(System.out::println);
 
-        int[] arr = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-        // int[] sortedArray = Arrays.stream(arr).sorted().toArray();
-        String input[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" };
-        List<Integer> list = Arrays.stream(input)
-                .map(Integer::parseInt)
-                .toList();
-        System.out.println("List: " + list);
-
     }
 
 }

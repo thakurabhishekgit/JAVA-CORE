@@ -24,7 +24,7 @@ public class SetExample {
         // } else {
         // System.out.println(numberToCheck + " is not present in the set.");
         // }
-        System.out.println("Size of the set: " + set.contains(5));
+        System.out.println("Size of the set: " + set.size());
     }
 
 }
