@@ -105,6 +105,44 @@ public class PracticeQuestions {
         // }
         // System.out.println("Count of pairs with equal values: " + count);
 
+        // String sentence = "thequickbrownfoxjumpsoverthelazydog";
+        // Set<Character> uniqueChars = new LinkedHashSet<>();
+        // for (char c : sentence.toCharArray()) {
+        // uniqueChars.add(c);
+        // }
+        // System.out.println("Unique characters in the sentence: " +
+        // uniqueChars.size());
+
+        int[][] nums1 = { { 1, 5 }, { 2, 3 }, { 4, 6 } };
+        int[][] nums2 = { { 1, 2 }, { 3, 4 }, { 4, 6 } };
+        // op : {{1,7}, {2,5}, {4,12}}
+        Map<Integer, Integer> mapnums1 = new HashMap<>();
+        for (int[] pair : nums1) {
+            mapnums1.put(pair[0], pair[1]);
+        }
+        Map<Integer, Integer> mapnums2 = new HashMap<>();
+        for (int[] pair : nums2) {
+            mapnums2.put(pair[0], pair[1]);
+        }
+        List<int[]> result = new ArrayList<>();
+        for (Map.Entry<Integer, Integer> entry : mapnums1.entrySet()) {
+            int key = entry.getKey();
+            int value1 = entry.getValue();
+            if (mapnums2.containsKey(key)) {
+                int value2 = mapnums2.get(key);
+                result.add(new int[] { key, value1 + value2 });
+            } else {
+                result.add(new int[] { key, value1 });
+            }
+        }
+        for (Map.Entry<Integer, Integer> entry : mapnums2.entrySet()) {
+            int key = entry.getKey();
+            int value2 = entry.getValue();
+            if (!mapnums1.containsKey(key)) {
+                result.add(new int[] { key, value2 });
+            }
+        }
+        System.out.println("Merged array: " + Arrays.deepToString(result.toArray(new int[0][])));
     }
 
 }
