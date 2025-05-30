@@ -113,36 +113,55 @@ public class PracticeQuestions {
         // System.out.println("Unique characters in the sentence: " +
         // uniqueChars.size());
 
-        int[][] nums1 = { { 1, 5 }, { 2, 3 }, { 4, 6 } };
-        int[][] nums2 = { { 1, 2 }, { 3, 4 }, { 4, 6 } };
-        // op : {{1,7}, {2,5}, {4,12}}
-        Map<Integer, Integer> mapnums1 = new HashMap<>();
-        for (int[] pair : nums1) {
-            mapnums1.put(pair[0], pair[1]);
-        }
-        Map<Integer, Integer> mapnums2 = new HashMap<>();
-        for (int[] pair : nums2) {
-            mapnums2.put(pair[0], pair[1]);
-        }
-        List<int[]> result = new ArrayList<>();
-        for (Map.Entry<Integer, Integer> entry : mapnums1.entrySet()) {
-            int key = entry.getKey();
-            int value1 = entry.getValue();
-            if (mapnums2.containsKey(key)) {
-                int value2 = mapnums2.get(key);
-                result.add(new int[] { key, value1 + value2 });
-            } else {
-                result.add(new int[] { key, value1 });
-            }
-        }
-        for (Map.Entry<Integer, Integer> entry : mapnums2.entrySet()) {
-            int key = entry.getKey();
-            int value2 = entry.getValue();
-            if (!mapnums1.containsKey(key)) {
-                result.add(new int[] { key, value2 });
-            }
-        }
-        System.out.println("Merged array: " + Arrays.deepToString(result.toArray(new int[0][])));
+        // int[][] nums1 = { { 1, 5 }, { 2, 3 }, { 4, 6 } };
+        // int[][] nums2 = { { 1, 2 }, { 3, 4 }, { 4, 6 } };
+        // // op : {{1,7}, {2,5}, {4,12}}
+        // Map<Integer, Integer> mapnums1 = new HashMap<>();
+        // for (int[] pair : nums1) {
+        // mapnums1.put(pair[0], pair[1]);
+        // }
+        // Map<Integer, Integer> mapnums2 = new HashMap<>();
+        // for (int[] pair : nums2) {
+        // mapnums2.put(pair[0], pair[1]);
+        // }
+        // List<int[]> result = new ArrayList<>();
+        // for (Map.Entry<Integer, Integer> entry : mapnums1.entrySet()) {
+        // int key = entry.getKey();
+        // int value1 = entry.getValue();
+        // if (mapnums2.containsKey(key)) {
+        // int value2 = mapnums2.get(key);
+        // result.add(new int[] { key, value1 + value2 });
+        // } else {
+        // result.add(new int[] { key, value1 });
+        // }
+        // }
+        // for (Map.Entry<Integer, Integer> entry : mapnums2.entrySet()) {
+        // int key = entry.getKey();
+        // int value2 = entry.getValue();
+        // if (!mapnums1.containsKey(key)) {
+        // result.add(new int[] { key, value2 });
+        // }
+        // }
+        // System.out.println("Merged array: " + Arrays.deepToString(result.toArray(new
+        // int[0][])));
+
+        // String[] names = { "Mary", "John", "Emma" };
+        // int[] heights = { 180, 165, 170 };
+        // // op : ["Mary","Emma","John"]
+        // Map<String, Integer> nameHeightMap = new HashMap<>();
+        // for (int i = 0; i < names.length; i++) {
+        // nameHeightMap.put(names[i], heights[i]);
+        // }
+        // List<Map.Entry<String, Integer>> entryList = new
+        // ArrayList<>(nameHeightMap.entrySet());
+        // entryList.sort((a, b) -> b.getValue().compareTo(a.getValue())); // Sort by
+        // height in descending order
+        // List<String> sortedNames = new ArrayList<>();
+        // for (Map.Entry<String, Integer> entry : entryList) {
+        // sortedNames.add(entry.getKey());
+        // }
+        // System.out.println("Sorted names by height: " +
+        // Arrays.toString(sortedNames.toArray()));
     }
 
 }
