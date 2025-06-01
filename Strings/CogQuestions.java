@@ -111,4 +111,8 @@ public class CogQuestions {
         System.out.println("Sorted String: " + new String(arr));
     }
 
+    public static String reverseString(String str) {
+        StringBuilder sb = new StringBuilder(str);
+        return sb.reverse().toString();
+    }
 }
