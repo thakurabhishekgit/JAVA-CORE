@@ -25,17 +25,17 @@ public class ProblemsString {
         // }
 
         // // anagram check
-        // String s1 = "listen";
-        // String s2 = "silent";
-        // char[] arr1 = s1.toCharArray();
-        // char[] arr2 = s2.toCharArray();
-        // Arrays.sort(arr1);
-        // Arrays.sort(arr2);
-        // if (Arrays.equals(arr1, arr2)) {
-        // System.out.println("The two strings are anagram of each other.");
-        // } else {
-        // System.out.println("The two strings are NOT anagram of each other.");
-        // }
+        String s1 = "listen";
+        String s2 = "silent";
+        char[] arr1 = s1.toCharArray();
+        char[] arr2 = s2.toCharArray();
+        Arrays.sort(arr1);
+        Arrays.sort(arr2);
+        if (Arrays.equals(arr1, arr2)) {
+            System.out.println("The two strings are anagram of each other.");
+        } else {
+            System.out.println("The two strings are NOT anagram of each other.");
+        }
 
         // // unique subset in a string
         // String uni = "abcbcassd";
