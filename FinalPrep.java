@@ -79,7 +79,8 @@ public class FinalPrep {
         // hashing and sorting
 
         int[] nums = { 1, 5, 4, 2, 9, 9, 9 };
-        int k = 3;
+        // int k = 3;
+        Arrays.sort(nums);
 
         // Output: 15
         // Explanation: The subarrays of nums with length 3 are:
@@ -93,27 +94,28 @@ public class FinalPrep {
         // We return 15 because it is the maximum subarray sum of all the subarrays that
         // meet the conditions
 
-        int maxSum = 0;
-        for (int i = 0; i <= nums.length - k; i++) {
-            Set<Integer> uniqueElements = new HashSet<>();
-            int currentSum = 0;
-            boolean isValid = true;
+        // int maxSum = 0;
+        // for (int i = 0; i <= nums.length - k; i++) {
+        // Set<Integer> uniqueElements = new HashSet<>();
+        // int currentSum = 0;
+        // boolean isValid = true;
 
-            for (int j = i; j < i + k; j++) {
-                if (uniqueElements.contains(nums[j])) {
-                    isValid = false;
-                    break;
-                }
-                uniqueElements.add(nums[j]);
-                currentSum += nums[j];
-            }
+        // for (int j = i; j < i + k; j++) {
+        // if (uniqueElements.contains(nums[j])) {
+        // isValid = false;
+        // break;
+        // }
+        // uniqueElements.add(nums[j]);
+        // currentSum += nums[j];
+        // }
 
-            if (isValid) {
-                maxSum = Math.max(maxSum, currentSum);
-            }
-        }
+        // if (isValid) {
+        // maxSum = Math.max(maxSum, currentSum);
+        // }
+        // }
 
-        System.out.println("Maximum subarray sum of length " + k + " with unique elements: " + maxSum);
+        // System.out.println("Maximum subarray sum of length " + k + " with unique
+        // elements: " + maxSum);
 
     }
 

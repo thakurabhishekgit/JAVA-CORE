@@ -78,7 +78,7 @@ public class ArrayListDSAProblems {
 
         // 2. Remove Duplicates
         ArrayList<Integer> noDup = removeDuplicates(new ArrayList<>(list));
-
+        System.out.println("Original List After Removing Duplicates: " + noDup);
         // 3. Frequency Count
         countFrequency(new ArrayList<>(list));
 
