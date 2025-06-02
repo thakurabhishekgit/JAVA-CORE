@@ -25,8 +25,8 @@ public class ProblemsString {
         // }
 
         // // anagram check
-        String s1 = "listen";
-        String s2 = "silent";
+        String s1 = "listetn";
+        String s2 = "silentt";
         char[] arr1 = s1.toCharArray();
         char[] arr2 = s2.toCharArray();
         Arrays.sort(arr1);
