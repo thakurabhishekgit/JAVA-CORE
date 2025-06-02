@@ -78,34 +78,42 @@ public class FinalPrep {
 
         // hashing and sorting
 
-        map.entrySet().stream()
-                .sorted(Map.Entry.comparingByKey())
-                .forEach(entry -> System.out.println("Key: " + entry.getKey() + ", Value: " + entry.getValue()));
+        int[] nums = { 1, 5, 4, 2, 9, 9, 9 };
+        int k = 3;
 
-        map.entrySet().stream()
-                .sorted(Map.Entry.comparingByValue(Collections.reverseOrder()))
-                .forEach(entry -> System.out.println("Key: " + entry.getKey() + ", Value: " + entry.getValue()));
+        // Output: 15
+        // Explanation: The subarrays of nums with length 3 are:
+        // - [1,5,4] which meets the requirements and has a sum of 10.
+        // - [5,4,2] which meets the requirements and has a sum of 11.
+        // - [4,2,9] which meets the requirements and has a sum of 15.
+        // - [2,9,9] which does not meet the requirements because the element 9 is
+        // repeated.
+        // - [9,9,9] which does not meet the requirements because the element 9 is
+        // repeated.
+        // We return 15 because it is the maximum subarray sum of all the subarrays that
+        // meet the conditions
 
-        Map<Integer, Integer> def = new LinkedHashMap<>(
-                Map.of(
-                        1, 10,
-                        2, 20,
-                        3, 30,
-                        4, 40,
-                        5, 50,
-                        6, 60,
-                        7, 70,
-                        8, 80,
-                        9, 90,
-                        10, 100));
+        int maxSum = 0;
+        for (int i = 0; i <= nums.length - k; i++) {
+            Set<Integer> uniqueElements = new HashSet<>();
+            int currentSum = 0;
+            boolean isValid = true;
 
-        def.entrySet().stream().sorted(Map.Entry.comparingByKey(Collections.reverseOrder()))
-                .forEachOrdered(e -> System.out.println(e.getKey() + " " + e.getValue())); // (null, null)
+            for (int j = i; j < i + k; j++) {
+                if (uniqueElements.contains(nums[j])) {
+                    isValid = false;
+                    break;
+                }
+                uniqueElements.add(nums[j]);
+                currentSum += nums[j];
+            }
 
-        Set<Integer> set = new HashSet<>(
-                Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
-        set.add(11);
-        System.out.println("Set: " + set);
+            if (isValid) {
+                maxSum = Math.max(maxSum, currentSum);
+            }
+        }
+
+        System.out.println("Maximum subarray sum of length " + k + " with unique elements: " + maxSum);
 
     }
 
