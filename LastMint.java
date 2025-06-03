@@ -103,6 +103,7 @@ public class LastMint {
         // Arrays.sort(str, Comparator.comparingInt(String::length).reversed());
         // System.out.println(Arrays.toString(str));
         String s = "d";
+        System.err.println("Last character: " + s.charAt(s.length() - 1));
 
     }
 }
