@@ -66,11 +66,26 @@ public class StackLeetcode {
         return stack.size();
     }
 
+    public static int[] maxDepthAfterSplit(String seq) {
+        Stack<Integer> stack = new Stack<>();
+        int dept = 0;
+        for (char c : seq.toCharArray()) {
+            if (c == '(') {
+                dept += 1;
+                stack.push(dept % 2);
+            } else {
+                stack.push(dept % 2);
+                dept -= 1;
+            }
+        }
+        return stack.stream().mapToInt(i -> i).toArray();
+    }
+
     public static void main(String[] args) {
 
         // System.out.println(isValid("()"));
         // System.out.println(maxDepth("(1+(2*3)+((8)/4))+1"));
-        System.out.println(minAddToMakeValid("(()))))"));
-
+        // System.out.println(minAddToMakeValid("(()))))"));
+        System.out.println(Arrays.toString(maxDepthAfterSplit("(()())")));
     }
 }
