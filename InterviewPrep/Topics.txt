@@ -1,0 +1,204 @@
+🟦 Java Technical Interview Prep (Fresher Edition)
+1️⃣ Core Java Basics
+
+What are the main features of Java?
+
+Difference between JDK, JRE, and JVM.
+
+Explain Java Virtual Machine (JVM) and its architecture.
+
+What is bytecode? Why is Java platform-independent?
+
+Difference between compiler and interpreter.
+
+What is the JIT compiler?
+
+Primitive data types in Java and their sizes.
+
+Difference between == and .equals().
+
+Why is String immutable in Java?
+
+What is the String Pool in Java?
+
+2️⃣ OOP Concepts (Very Important)
+
+Explain OOP principles: Encapsulation, Inheritance, Polymorphism, Abstraction.
+
+Difference between method overloading vs method overriding (with examples).
+
+Abstract class vs Interface.
+
+Can an interface have a constructor? Why/why not?
+
+What is multiple inheritance? Why doesn’t Java support it directly?
+
+What is the use of the super keyword?
+
+Can we override a static method? (No, explain why).
+
+What is a constructor? Can constructors be overloaded?
+
+Difference between constructor vs method.
+
+this vs super keyword.
+
+3️⃣ Keywords & Modifiers
+
+Difference between final, finally, finalize.
+
+What are access modifiers in Java (public, private, protected, default)?
+
+Difference between static variable, method, and block.
+
+What is a transient variable?
+
+What does the volatile keyword do?
+
+Difference between ==, equals(), and hashCode().
+
+4️⃣ Java Memory & Garbage Collection
+
+Explain heap vs stack memory.
+
+Difference between Stack memory vs Heap memory.
+
+What is Garbage Collection in Java?
+
+Can you force Garbage Collection? (System.gc() hint).
+
+Explain reference types: strong, soft, weak, phantom references.
+
+5️⃣ Strings & Wrapper Classes
+
+Difference between String, StringBuilder, and StringBuffer.
+
+What is autoboxing and unboxing in Java?
+
+Why are wrapper classes needed in Java?
+
+How does intern() work with Strings?
+
+6️⃣ Java Collections Framework (Super Important ✅)
+
+Difference between Collection vs Collections.
+
+Interfaces: List, Set, Queue, Map.
+
+Difference between ArrayList vs LinkedList.
+
+Difference between HashSet vs TreeSet.
+
+Difference between HashMap vs Hashtable vs ConcurrentHashMap.
+
+What is fail-fast vs fail-safe iterator?
+
+Difference between Comparable vs Comparator.
+
+How does HashMap internally work (hashing, buckets, collisions)?
+
+Explain Iterator vs ListIterator.
+
+Difference between Vector vs ArrayList.
+
+7️⃣ Multithreading & Concurrency
+
+Difference between process vs thread.
+
+How to create a thread in Java (Thread class vs Runnable interface).
+
+Difference between synchronized method vs synchronized block.
+
+What is a deadlock? How to prevent it?
+
+Difference between sleep() vs wait().
+
+Difference between notify() vs notifyAll().
+
+What are daemon threads?
+
+What is ExecutorService in Java?
+
+Explain concurrent collections (ConcurrentHashMap, CopyOnWriteArrayList).
+
+8️⃣ Exception Handling
+
+Difference between checked vs unchecked exceptions.
+
+Difference between throw vs throws.
+
+What is the difference between try-catch-finally and try-with-resources?
+
+Can we have a try block without a catch?
+
+What happens if an exception is not caught?
+
+Common exceptions: NullPointerException, ArrayIndexOutOfBoundsException, ClassCastException.
+
+9️⃣ Java I/O & Serialization
+
+Difference between FileReader vs BufferedReader.
+
+What is serialization in Java?
+
+What is the role of the transient keyword in serialization?
+
+Difference between Serializable vs Externalizable.
+
+🔟 JVM, JDK, JRE (Advanced Fundamentals)
+
+Explain ClassLoader in Java.
+
+What are the different memory areas in JVM (heap, stack, method area, etc.).
+
+Explain JVM execution flow when a Java program runs.
+
+Difference between Just-In-Time Compiler and interpreter.
+
+1️⃣1️⃣ Java 8 (Must-Know for Freshers)
+
+What are Lambda expressions? Give an example.
+
+What is a Functional Interface? (e.g., Runnable, Comparator)
+
+Difference between map() vs flatMap() in Streams.
+
+What is the use of Optional in Java 8?
+
+Difference between forEach() vs iterator() in Streams.
+
+What is the default method in interfaces?
+
+1️⃣2️⃣ Hot Coding Questions (Java + DSA Blend)
+
+These are small but very common:
+
+Reverse a string (without using library functions).
+
+Check if a string is a palindrome.
+
+Find the first non-repeating character in a string.
+
+Implement a stack using an array.
+
+Find the missing number in an array of size n.
+
+Implement binary search in Java.
+
+Detect a cycle in a linked list.
+
+Traverse a binary tree (inorder, preorder, postorder).
+
+Count frequency of words in a string using HashMap.
+
+✅ How to Prepare Smartly
+
+Revise OOP + Collections + Exceptions → most frequently asked for freshers.
+
+Know JVM & Memory Mgmt basics → asked to test depth.
+
+Practice Small DSA in Java (arrays, strings, collections-based coding).
+
+Don’t ignore Java 8 features (lambda, streams).
+
+Be ready to explain your projects in Java (especially if Spring Boot is there).

@@ -39,19 +39,19 @@ public class PracticeQuestions {
 
         //
 
-        // int[] nums = { 1, 12, -5, -6, 50, 3 };
-        // int k = 4;
-        // double maxSumAvg = Integer.MIN_VALUE;
-        // for (int i = 0; i < nums.length - k + 1; i++) {
-        // int[] subarray = Arrays.copyOfRange(nums, i, i + k);
-        // double average = Arrays.stream(subarray).average().orElse(0.0);
-        // System.out.printf("Average of subarray %s: %.2f%n",
-        // Arrays.toString(subarray), average);
-        // maxSumAvg = Math.max(maxSumAvg, average);
+        int[] nums = { 1, 12, -5, -6, 50, 3 };
+        int k = 4;
+        double maxSumAvg = Integer.MIN_VALUE;
+        for (int i = 0; i < nums.length - k + 1; i++) {
+            int[] subarray = Arrays.copyOfRange(nums, i, i + k);
+            double average = Arrays.stream(subarray).average().orElse(0.0);
+            System.out.printf("Average of subarray %s: %.2f%n",
+                    Arrays.toString(subarray), average);
+            maxSumAvg = Math.max(maxSumAvg, average);
 
-        // }
-        // System.out.println("Maximum average of any " + k + " consecutive elements: "
-        // + maxSumAvg);
+        }
+        System.out.println("Maximum average of any " + k + " consecutive elements: "
+                + maxSumAvg);
 
         // int[] arr = { 16, 17, 4, 3, 5, 2 };
         // List<Integer> result = new ArrayList<>();

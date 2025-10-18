@@ -110,7 +110,6 @@ public class StringMethods {
             sb.append(part).append(" ");
         }
         System.out.println("Joined string: " + sb.toString().trim());
-
         String a1 = "listen";
         String a2 = "silent";
         char[] a = a1.toCharArray();
