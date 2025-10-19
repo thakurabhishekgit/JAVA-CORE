@@ -22,10 +22,21 @@ class C implements B {
     }
 }
 
+abstract class D {
+    abstract void show();
+}
+
 public class RawConcepts {
     public static void main(String[] args) {
         C obj = new C();
         obj.display(); // Output: Class C
+
+        D d = new D() {
+            void show() {
+                System.out.println("Anonymous class extending abstract class D");
+            }
+        };
+        d.show();
 
     }
 }
