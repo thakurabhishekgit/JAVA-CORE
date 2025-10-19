@@ -1,4 +1,4 @@
-package FG;
+package FG.Streams;
 
 import java.util.*;
 
