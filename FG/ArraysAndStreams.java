@@ -53,6 +53,9 @@ public class ArraysAndStreams {
         // average
         double avg = Arrays.stream(arr).average().orElse(0.0);
         System.out.println("Average: " + avg);
+        // collection
+        List<Integer> list = Arrays.stream(arr).boxed().toList();
+        System.out.println("List: " + list);
 
     }
 }
