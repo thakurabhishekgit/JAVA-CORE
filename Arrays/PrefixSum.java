@@ -2,7 +2,6 @@ import java.util.*;
 public class PrefixSum {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
         // Input: space-separated integers
         System.out.print("Enter array elements (space-separated): ");
         String[] input = sc.nextLine().split(" ");
