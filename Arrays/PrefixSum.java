@@ -1,4 +1,5 @@
 import java.util.*;
+
 public class PrefixSum {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -6,8 +7,6 @@ public class PrefixSum {
         System.out.print("Enter array elements (space-separated): ");
         String[] input = sc.nextLine().split(" ");
         int[] arr = Arrays.stream(input).mapToInt(Integer::parseInt).toArray();
-
-        // PREFIX SUM
         int[] prefix = new int[arr.length];
         for (int i = 0; i < arr.length; i++) {
             prefix[i] = (i == 0) ? arr[i] : prefix[i - 1] + arr[i];
