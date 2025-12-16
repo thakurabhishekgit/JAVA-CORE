@@ -107,6 +107,16 @@ public class StreamAPIQuestions {
                 .forEach(System.out::println);
 
 
+       //sum of even index elements
+
+       List<Integer> nums = Arrays.asList(20,3,54,323,45,3);
+       int summ = IntStream
+               .range(0 , nums.size())
+               .filter(i -> i % 2 == 0)
+               .map(i -> nums.get(i))
+               .sum();
+
+       System.out.println(summ);
 
 
 
