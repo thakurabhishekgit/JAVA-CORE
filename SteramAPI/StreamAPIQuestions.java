@@ -128,7 +128,16 @@ public class StreamAPIQuestions {
         System.out.println(Arrays.toString(real) + "distinct");
 
 
+        //top 3 elements from array
+        List<Integer> listOfIntegers = Arrays.asList(71, 18, 42, 21, 67, 32, 95,
+                14, 56, 87);
 
+        List<Integer> topThree = listOfIntegers
+                .stream()
+                .sorted(Comparator.reverseOrder())
+                .limit(3)
+                .toList();
+        System.out.println(topThree + "topThree");
 
 
 
