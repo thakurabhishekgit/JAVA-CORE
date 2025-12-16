@@ -177,6 +177,25 @@ public class StreamAPIQuestions {
                 .toList();
         System.out.println(commonListOf2 + "commonListOf2");
 
+//        You have List<List<Integer>>. How do you create a single List<Integer>?
+//        Input: List<List<Integer>> nums = List.of(List.of(1, 2), List.of(3, 4));
+//        Output: [1,2,3,4]You have List<List<Integer>>. How do you create a single List<Integer>?
+//        Input: List<List<Integer>> nums = List.of(List.of(1, 2), List.of(3, 4));
+//        Output: [1,2,3,4]
+
+
+        List<List<Integer>> numss = List.of(
+                List.of(1, 2),
+                List.of(3, 4)
+        );
+
+        List<Integer> result = numss.stream()
+                .flatMap(List::stream)
+                .toList();
+
+        System.out.println(result); // [1, 2, 3, 4]
+
+
 
 
 
