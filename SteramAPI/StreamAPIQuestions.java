@@ -26,8 +26,8 @@ public class StreamAPIQuestions {
                 .toArray();
          System.out.println(Arrays.toString(sortedDescArr));
 
-         List<Integer> sortedDescList = Arrays.stream(arr)
-                .boxed()
+         List<Integer> exp = Arrays.asList(10 , 20 , 30 ,40);
+         List<Integer> sortedDescList = exp.stream()
                 .sorted(Collections.reverseOrder())
                         .toList();
          System.out.println(sortedDescList);
