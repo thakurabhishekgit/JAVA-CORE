@@ -1,6 +1,7 @@
 package SteramAPI;
 import java.util.*;
 import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 public class StreamAPIQuestions {
     public static void main(String[] args) {
@@ -138,6 +139,23 @@ public class StreamAPIQuestions {
                 .limit(3)
                 .toList();
         System.out.println(topThree + "topThree");
+
+
+        // merge two sorted array
+
+        int[] a = new int[] { 4, 2, 7, 1 };
+        int[] b = new int[] { 8, 3, 9, 5 };
+
+        int [] combined = Stream.concat(
+                Arrays.stream(a).boxed(),
+                Arrays.stream(b).boxed()
+        )
+                .sorted()
+                .mapToInt(Integer::intValue)
+                .toArray();
+
+        System.out.println(Arrays.toString(combined) + "comboned two arrays and sorted");
+
 
 
 
