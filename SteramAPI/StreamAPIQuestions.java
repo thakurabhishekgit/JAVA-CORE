@@ -158,6 +158,18 @@ public class StreamAPIQuestions {
 
 
 
+        int[] combined2 = IntStream.concat(
+                        Arrays.stream(a),
+                        Arrays.stream(b)
+                )
+                .sorted()
+                .toArray();
+
+        System.out.println(Arrays.toString(combined2));
+
+
+
+
 
 
 
