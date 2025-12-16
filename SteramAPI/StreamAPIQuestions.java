@@ -118,6 +118,16 @@ public class StreamAPIQuestions {
 
        System.out.println(summ);
 
+       //Remove duplicates and return array
+
+        int dup[] = {1,2,34,5,2,12,311,1,2,3};
+
+        int real[] = Arrays.stream(dup)
+                .distinct()
+                .toArray();
+        System.out.println(Arrays.toString(real) + "distinct");
+
+
 
 
 
