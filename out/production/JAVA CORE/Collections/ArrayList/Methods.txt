@@ -1,0 +1,40 @@
+| **Python List**           | **Java ArrayList**                                   | **Use / Purpose**       |
+| ------------------------- | ---------------------------------------------------- | ----------------------- |
+| `append(x)`               | `list.add(x)`                                        | Add element at end      |
+| `insert(i, x)`            | `list.add(i, x)`                                     | Add at index            |
+| `list[i]`                 | `list.get(i)`                                        | Get element             |
+| `list[i] = x`             | `list.set(i, x)`                                     | Update value            |
+| `del list[i]`             | `list.remove(i)`                                     | Remove at index         |
+| `list.remove(x)`          | `list.remove(Object x)`                              | Remove first occurrence |
+| `x in list`               | `list.contains(x)`                                   | Check if exists         |
+| `len(list)`               | `list.size()`                                        | Length                  |
+| `list.pop()`              | `list.remove(list.size() - 1)`                       | Pop last                |
+| `list.pop(i)`             | `list.remove(i)`                                     | Pop at index            |
+| `list.clear()`            | `list.clear()`                                       | Remove all elements     |
+| `list.index(x)`           | `list.indexOf(x)`                                    | First index of x        |
+| `list.count(x)`           | `Collections.frequency(list, x)`                     | Count occurrences       |
+| `list.sort()`             | `Collections.sort(list)`                             | Ascending sort          |
+| `list.sort(reverse=True)` | `Collections.sort(list, Collections.reverseOrder())` | Descending sort         |
+| `list[::-1]`              | `Collections.reverse(list)`                          | Reverse the list        |
+| `min(list)`               | `Collections.min(list)`                              | Minimum value           |
+| `max(list)`               | `Collections.max(list)`                              | Maximum value           |
+| `sum(list)`               | `list.stream().mapToInt(i -> i).sum()`               | Sum (Java 8+)           |
+
+
+
+
+| Method                  | Description              | Example                                         |
+| ----------------------- | ------------------------ | ----------------------------------------------- |
+| `add(E e)`              | Add element at the end   | `list.add(10);`                                 |
+| `add(int index, E e)`   | Insert at specific index | `list.add(1, 20);`                              |
+| `get(int index)`        | Get element at index     | `list.get(2);`                                  |
+| `set(int index, E e)`   | Replace element at index | `list.set(2, 50);`                              |
+| `remove(int index)`     | Remove by index          | `list.remove(1);`                               |
+| `remove(Object o)`      | Remove by value          | `list.remove(Integer.valueOf(10));`             |
+| `contains(Object o)`    | Check existence          | `list.contains(5);`                             |
+| `indexOf(Object o)`     | First occurrence index   | `list.indexOf(3);`                              |
+| `lastIndexOf(Object o)` | Last occurrence          | `list.lastIndexOf(3);`                          |
+| `size()`                | List size                | `list.size();`                                  |
+| `isEmpty()`             | Check if empty           | `list.isEmpty();`                               |
+| `clear()`               | Remove all elements      | `list.clear();`                                 |
+| `toArray()`             | Convert to array         | `Integer[] arr = list.toArray(new Integer[0]);` |

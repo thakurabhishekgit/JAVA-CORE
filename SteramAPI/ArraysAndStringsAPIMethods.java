@@ -1,8 +1,8 @@
 package SteramAPI;
 
 import java.util.*;
-import java.util.stream.*;
-public class ArraysAndStringsAPI {
+
+public class ArraysAndStringsAPIMethods {
     public static void main(String[] args) {
 
         int[] arr = { 5, 2, 9, 1, 5, 6 };
@@ -23,10 +23,6 @@ public class ArraysAndStringsAPI {
         Arrays.sort(arr);
         System.out.println("Sorted array: " + Arrays.toString(arr));
 
-//        int arr[] = {1,4,6,7,8,8};
-//        Arrays.stream(arr).
-//                filter(x -> x % 2 == 0).
-//                map(x -> x * x).
-//                forEach(System.out::println);
+
     }
 }
