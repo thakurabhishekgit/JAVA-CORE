@@ -1,5 +1,6 @@
 package SteramAPI;
 import java.util.*;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -194,6 +195,10 @@ public class StreamAPIQuestions {
                 .toList();
 
         System.out.println(result); // [1, 2, 3, 4]
+
+        //Stream api using hashmap
+
+
 
 
 
