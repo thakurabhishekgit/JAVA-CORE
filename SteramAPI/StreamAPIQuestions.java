@@ -198,7 +198,17 @@ public class StreamAPIQuestions {
 
         //Stream api using hashmap
 
+        List<Integer> num = Arrays.asList(1,2,3,41,1,2,34,3,3,5,6,5,6);
 
+        num.stream()
+                .collect(Collectors.groupingBy(
+                        n -> n,
+                        Collectors.counting()
+                ))
+                .forEach(
+                        (key , value) -> System.out.println("key : " + key +
+                                " value : " + value)
+                );
 
 
 
