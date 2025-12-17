@@ -41,6 +41,24 @@ public class AdvanceQuestions {
                 .get()
                 .getKey();
 
-        System.out.println("maxFreq : " + maxFreq);
+        System.out.println("maxFreqKey : " + maxFreq);
+
+
+        //printing most frequent key and value
+
+         nums.stream()
+                .collect(Collectors.groupingBy(
+                        x -> x,
+                        Collectors.counting()
+                ))
+                .entrySet()
+                .stream()
+                .max(Map.Entry.comparingByValue())
+                .ifPresent(entry ->
+                System.out.println(entry.getKey() + " -> " + entry.getValue())
+        );
+
+
+
     }
 }
