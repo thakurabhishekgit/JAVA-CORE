@@ -80,5 +80,30 @@ public class AdvanceQuestions {
                 .stream()
                 .filter(e -> e.getValue() == 2)
                 .forEach(System.out::println);
+
+
+
+        //set based questions
+
+        List<Integer> set = Arrays.asList(1,2,1,2,34,2,1,2,3,2);
+
+        set.stream()
+                .collect(Collectors.toSet())
+                .stream()
+                .mapToInt(Integer::intValue)
+                .forEach(System.out::println);
+
+        List<Integer> res = new ArrayList<>();
+
+        set.stream()
+                .forEach(x -> {
+                    if (x > 20) {
+                        res.add(x);
+
+                    }
+                });
+        System.out.println(res);
+
+
     }
 }
