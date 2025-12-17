@@ -58,7 +58,27 @@ public class AdvanceQuestions {
                 System.out.println(entry.getKey() + " -> " + entry.getValue())
         );
 
+         //sort hashmap by values
+        nums.stream()
+                .collect(Collectors.groupingBy(
+                        x -> x ,
+                        Collectors.counting()
+                ))
+                .entrySet()
+                .stream()
+                .sorted(Collections.reverseOrder(Map.Entry.comparingByValue()))
+                .forEach(System.out::println);
 
+        //print values whose count = 2
 
+        nums.stream()
+                .collect(Collectors.groupingBy(
+                        x -> x ,
+                        Collectors.counting()
+                ))
+                .entrySet()
+                .stream()
+                .filter(e -> e.getValue() == 2)
+                .forEach(System.out::println);
     }
 }
