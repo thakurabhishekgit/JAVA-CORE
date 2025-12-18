@@ -41,6 +41,17 @@ public class StudentScenario {
         System.out.println( "HydMoreThan80 : "+ HydMoreThan80);
 
 
+        // Find the student with the highest grade
+
+        Optional<Student> maxGrade = students.stream()
+                .max(Comparator.comparingDouble(student -> student.grade));
+        System.out.println( "maxGrade : "+ maxGrade);
+
+
+
+
+
+
 
     }
 }
