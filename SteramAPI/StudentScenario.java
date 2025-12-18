@@ -69,8 +69,17 @@ public class StudentScenario {
                         System.out.println("Dept : " + key +" Avg : " + Math.round(value)));
 
 
+        //List students sorted by age and then by grade
 
+        List<Student> sortedStudents = students.stream()
+                .sorted(Comparator.comparingInt((Student s) -> s.age).thenComparingDouble(s -> s.grade))
+                .toList();
 
+        sortedStudents.forEach(
+                x -> System.out.println(x)
+        );
+
+        //Create a comma-separated list of student names
 
     }
 }
