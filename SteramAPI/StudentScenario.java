@@ -116,6 +116,14 @@ public class StudentScenario {
 
         System.out.println("gradeAbove8" + gradeAbove8);
 
+        // Find the student with the longest full name
+
+        Optional<Student> longestName = students.stream()
+                .max(Comparator.comparingInt(x -> x.lastName.length() + x.firstName.length()));
+
+        System.out.println("longestName" + longestName.get().firstName);
+
+
 
 
 
