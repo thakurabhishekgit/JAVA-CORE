@@ -58,6 +58,16 @@ public class StudentScenario {
                 .forEach((key , value) ->
                         System.out.println("Dept : " + key +" Count : " + value));
 
+        // 4 Find the average grade per department
+
+        students.stream()
+                .collect(Collectors.groupingBy(
+                        x -> x.department,
+                        Collectors.averagingDouble(x -> x.grade)
+                ))
+                .forEach((key , value) ->
+                        System.out.println("Dept : " + key +" Avg : " + Math.round(value)));
+
 
 
 
