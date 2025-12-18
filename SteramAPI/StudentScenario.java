@@ -87,5 +87,12 @@ public class StudentScenario {
 
         System.out.println("6. Comma-separated student names: " + names);
 
+
+        //Check if all students are above 18
+
+        Boolean check = students.stream()
+                .allMatch(x -> x.age > 18);
+        System.out.println(check);
+
     }
 }
