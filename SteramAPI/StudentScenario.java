@@ -30,8 +30,17 @@ public class StudentScenario {
                 new Student("Arjun", "Naidu", "Bengaluru", 7.83, 20, "Civil")
         );
 
-        students.forEach(x ->
-                System.out.println(x)
-        );
+//        students.forEach(x ->
+//                System.out.println(x)
+//        );
+            //find the student from hyderabad whose grade is  > 80
+
+        List<Student> HydMoreThan80 = students.stream()
+                .filter(x -> x.city.equals("Hyderabad") && x.grade > 8.0)
+                .toList();
+        System.out.println( "HydMoreThan80 : "+ HydMoreThan80);
+
+
+
     }
 }
