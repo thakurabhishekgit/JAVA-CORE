@@ -1,5 +1,6 @@
 package SteramAPI;
 import java.util.*;
+import java.util.stream.Collectors;
 
 class Student {
     String firstName, lastName, city, department;
@@ -47,7 +48,15 @@ public class StudentScenario {
                 .max(Comparator.comparingDouble(student -> student.grade));
         System.out.println( "maxGrade : "+ maxGrade);
 
+        // 3. Count the number of students in each department
 
+        students.stream()
+                .collect(Collectors.groupingBy(
+                        x -> x.department,
+                        Collectors.counting()
+                ))
+                .forEach((key , value) ->
+                        System.out.println("Dept : " + key +" Count : " + value));
 
 
 
