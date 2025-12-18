@@ -109,6 +109,15 @@ public class StudentScenario {
 
         System.out.println(dept);
 
+        //Divide students into those who have grades above 8.0 and below
+        List<Student> gradeAbove8 = students.stream()
+                .filter(x -> x.grade > 8.0)
+                .toList();
+
+        System.out.println("gradeAbove8" + gradeAbove8);
+
+
+
 
 
     }
