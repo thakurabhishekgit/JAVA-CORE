@@ -79,7 +79,13 @@ public class StudentScenario {
                 x -> System.out.println(x)
         );
 
+
         //Create a comma-separated list of student names
+        String names = students.stream()
+                .map(s -> s.firstName + " " + s.lastName )
+                        .collect(Collectors.joining(", "));
+
+        System.out.println("6. Comma-separated student names: " + names);
 
     }
 }
