@@ -94,5 +94,22 @@ public class StudentScenario {
                 .allMatch(x -> x.age > 18);
         System.out.println(check);
 
+        //Find the department with the most students
+
+        String dept = students.stream()
+                .collect(Collectors.groupingBy(
+                        x -> x.department,
+                        Collectors.counting()
+                ))
+                .entrySet()
+                .stream()
+                .max(Map.Entry.comparingByValue())
+                .get()
+                .getKey();
+
+        System.out.println(dept);
+
+
+
     }
 }
