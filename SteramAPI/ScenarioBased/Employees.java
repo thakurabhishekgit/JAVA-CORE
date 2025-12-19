@@ -60,6 +60,19 @@ public class Employees {
         System.out.println(age.get().age());
 
 
+       // Create a map of department -> list of Employee names.
+
+        Map<String , Long> DeptWithCount = list.stream()
+                .collect(Collectors.groupingBy(
+                        x -> x.department(),
+                        Collectors.counting()
+                ));
+
+        DeptWithCount.forEach((key , value) ->
+                System.out.println("Dept : " + key +" Count : " + value));
+
+
+
 
 
 
