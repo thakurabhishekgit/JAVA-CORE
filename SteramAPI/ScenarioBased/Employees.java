@@ -73,6 +73,20 @@ public class Employees {
 
 
 
+        //Find the average age of Employees in each department.
+
+        Map<String , Double > avgAgeDept =
+                list.stream()
+                .collect(Collectors.groupingBy(
+                        x -> x.department(),
+                        Collectors.averagingDouble(x -> x.age())
+                ));
+
+        avgAgeDept.forEach((key , value) ->
+                System.out.println("Dept : " + key +" Avg : " + value));
+
+
+
 
 
 
