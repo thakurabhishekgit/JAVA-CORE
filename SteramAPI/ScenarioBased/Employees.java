@@ -111,6 +111,18 @@ public class Employees {
         System.out.println("Partitioned List: " + partitionedList);
 
 
+        // Group employees by department, then within each department find the oldest employee
+
+        Map<String , Optional<EmployeeDto>> DeptToEmpByAge = list.stream()
+                .collect(Collectors.groupingBy(
+                        x -> x.department(),
+                        Collectors.maxBy(Comparator.comparingInt(x -> x.age()))
+                ))
+                ;
+
+        System.out.println(DeptToEmpByAge);
+
+
 
 
 
