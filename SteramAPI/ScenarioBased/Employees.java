@@ -155,6 +155,22 @@ public class Employees {
         System.out.println(res);
 
 
+        // Return a map where keys will be first letter of the name and value will the set of names starting with
+        //that letter, no solution provided, try on your own.
+
+        Map<Character , Set<String>>  ress = list.stream()
+                .collect(Collectors.groupingBy(
+                        x -> x.name().charAt(0),
+                        Collectors.mapping(
+                                EmployeeDto::name,
+                                Collectors.toSet()
+                        )
+                ));
+
+        ress.forEach((key , value) -> {
+            System.out.println("Character : " + key + " , names" + value);
+        });
+
 
 
 
