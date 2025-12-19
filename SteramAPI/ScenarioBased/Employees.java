@@ -1,5 +1,6 @@
 package SteramAPI.ScenarioBased;
 import java.util.*;
+import java.util.stream.Collectors;
 
 record EmployeeDto(
         String name,
@@ -36,6 +37,20 @@ public class Employees {
                         .toList();
 
         System.out.println("csDesAge : " + csAgeDes);
+
+
+
+        // Group Employees by department and count how many Employees are in each department
+
+        list.stream()
+                .collect(Collectors.groupingBy(
+                        x -> x.department(),
+                        Collectors.counting()
+                ))
+                .forEach((key , value) ->
+                        System.out.println("Dept : " + key +", Count : " + value));
+
+
 
 
 
