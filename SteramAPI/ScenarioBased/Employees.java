@@ -50,6 +50,15 @@ public class Employees {
                 .forEach((key , value) ->
                         System.out.println("Dept : " + key +", Count : " + value));
 
+        //.Find the youngest female Employee.
+
+        Optional<EmployeeDto> age = list.stream()
+                .filter(x -> x.gender().equals("Male"))
+                .min(Comparator.comparingInt(EmployeeDto::age))
+                .stream().findFirst();
+
+        System.out.println(age.get().age());
+
 
 
 
