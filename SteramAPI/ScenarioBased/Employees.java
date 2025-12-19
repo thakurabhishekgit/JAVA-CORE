@@ -123,6 +123,20 @@ public class Employees {
         System.out.println(DeptToEmpByAge);
 
 
+        Map<String, Optional<Integer>> deptToMaxAge =
+                list.stream()
+                        .collect(Collectors.groupingBy(
+                                EmployeeDto::department,
+                                Collectors.mapping(
+                                        EmployeeDto::age,
+                                        Collectors.maxBy(Integer::compare)
+                                )
+                        ));
+
+        System.out.println(deptToMaxAge);
+
+
+
 
 
 
