@@ -137,6 +137,26 @@ public class Employees {
 
 
 
+        //. For each department, find the youngest employee, but instead of returning the employee object,
+        //return only their name in uppercase.
+
+        // key point  : collectingAndThen  - get the values with condition and then return based on comparision
+
+        Map<String  , String> res =
+                list.stream()
+                        .collect(Collectors.groupingBy(
+                                EmployeeDto::department,
+                                Collectors.collectingAndThen(
+                                        Collectors.minBy(Comparator.comparingInt(EmployeeDto::age)),
+                                        e -> e.get().name().toUpperCase()
+                                )
+                        ));
+
+        System.out.println(res);
+
+
+
+
 
 
 
