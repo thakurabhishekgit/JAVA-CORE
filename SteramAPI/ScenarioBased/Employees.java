@@ -86,6 +86,16 @@ public class Employees {
                 System.out.println("Dept : " + key +" Avg : " + value));
 
 
+        //. Get a list of unique departments Employees belong to
+
+        HashSet<String> seen = new HashSet<>();
+        List<String> uniqueDepartments =  list.stream()
+                .filter(e -> seen.add(e.department()))
+                .map(e -> e.department())
+                .toList();
+        System.out.println("Unique Departments: " + uniqueDepartments);
+
+
 
 
 
