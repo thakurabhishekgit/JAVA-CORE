@@ -26,8 +26,20 @@ public class Employees {
         list.add(employee5);
         list.add(employee6);
 
+        //Find the names of all Employees in the CS department, sorted by age in descending order
 
-        
+        List<EmployeeDto> csAgeDes = list.stream()
+                .filter(x ->
+                    x.department().equals("CS")
+                )
+                .sorted(Comparator.comparingInt(EmployeeDto::age).reversed())
+                        .toList();
+
+        System.out.println("csDesAge : " + csAgeDes);
+
+
+
+
 
     }
 
