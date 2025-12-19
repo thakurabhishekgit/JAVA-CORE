@@ -1,4 +1,4 @@
-package SteramAPI;
+package SteramAPI.ScenarioBased;
 import java.util.*;
 import java.util.stream.Collectors;
 
