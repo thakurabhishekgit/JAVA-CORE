@@ -96,6 +96,22 @@ public class Employees {
         System.out.println("Unique Departments: " + uniqueDepartments);
 
 
+        // Partition Employees into male and female groups, then list their names.
+        Map<String, List<String>> partitionedList =   list.stream().collect(Collectors.groupingBy(e -> {
+                    if(e.gender() == "Female") {
+                        return "Female";
+                    }
+                    else if(e.gender() == "Male") {
+                        return "Male";
+                    }
+                    return "";
+                },
+                Collectors.mapping(e -> e.name(), Collectors.toList())
+        ));
+        System.out.println("Partitioned List: " + partitionedList);
+
+
+
 
 
 
