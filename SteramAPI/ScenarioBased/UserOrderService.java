@@ -119,6 +119,22 @@ public class UserOrderService {
                 .forEach(System.out::println);
 
 
+        //4 Return list of orderIds where amount > 10,000 and status = PAID.
+        System.out.println("Return list of orderIds where amount > 10,000 and status = PAID.");
+        List<Order> res = orders
+                .stream()
+                .filter(x -> x.getAmount() > 10000 && x.getStatus().equals("PAID"))
+                .toList();
+
+        res.forEach(
+                x ->
+                System.out.println(x.userId)
+        );
+
+
+
+
+
 
 
 
