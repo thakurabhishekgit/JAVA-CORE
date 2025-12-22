@@ -105,6 +105,19 @@ public class UserOrderService {
                 .forEach(System.out::println);
 
 
+        //3 Check if any user has more than 5 cancelled orders.
+        System.out.println("Check if any user has more than 3 cancelled orders.");
+        orders.stream()
+                .filter(x -> x.getStatus().equals("CANCELLED"))
+                .collect(Collectors.groupingBy(
+                        Order::getUserId ,
+                        Collectors.counting()
+                ))
+                .entrySet()
+                .stream()
+                .filter(x -> x.getValue() > 3)
+                .forEach(System.out::println);
+
 
 
 
