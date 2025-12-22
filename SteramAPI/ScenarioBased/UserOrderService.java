@@ -96,6 +96,16 @@ public class UserOrderService {
                         System.out.println("userId : " + x +" TotalAmount : " + y)
         );
 
+        // 2 Find top 3 users by total order amount.
+
+        totalPaidByUsers.entrySet()
+                .stream()
+                .sorted(Map.Entry.comparingByValue())
+                .limit(3)
+                .forEach(System.out::println);
+
+
+
 
 
 
