@@ -70,14 +70,35 @@ public class UserOrderService {
 
         Map<String , Double> totalPaidByUsers = orders.stream()
                 .collect(Collectors.groupingBy(
-                        x -> x.userId ,
-                        Collectors.summingDouble( x -> x.amount)
+                        x -> x.getUserId() ,
+                        Collectors.summingDouble( x -> x.getAmount())
                 ));
 
         totalPaidByUsers.forEach(
                 (x , y) ->
                         System.out.println("userId : " + x +" TotalAmount : " + y)
         );
+
+        System.out.println("1.1 Get total paid amount per user where the status is paid or unpaid");
+
+        //1.1 Get total paid amount per user where the status is paid or unpaid
+
+        Map<String, Double> totalPaidByUserWithStatus =
+                orders.stream()
+                        .filter(order -> "PAID".equals(order.getStatus()))
+                        .collect(Collectors.groupingBy(
+                                Order::getUserId,
+                                Collectors.summingDouble(Order::getAmount)
+                        ));
+
+        totalPaidByUserWithStatus.forEach(
+                (x , y) ->
+                        System.out.println("userId : " + x +" TotalAmount : " + y)
+        );
+
+
+
+
 
     }
 
