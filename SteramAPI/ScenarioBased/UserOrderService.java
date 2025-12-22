@@ -19,6 +19,16 @@ class Order {
     public String getUserId() { return userId; }
     public double getAmount() { return amount; }
     public String getStatus() { return status; }
+    @Override
+    public String toString() {
+        return "Order{" +
+                "orderId='" + orderId + '\'' +
+                ", userId='" + userId + '\'' +
+                ", amount=" + amount +
+                ", status='" + status + '\'' +
+                '}';
+    }
+
 }
 
 
@@ -131,6 +141,19 @@ public class UserOrderService {
                 System.out.println(x.userId)
         );
 
+        //5  Convert orders to Map<orderId, Order> safely (handle duplicates).
+        Map<String, Order> orderMap =
+                orders.stream()
+                        .collect(Collectors.toMap(
+                                Order::getOrderId,
+                                order -> order,
+                                (existing, duplicate) -> duplicate
+                        ));
+
+        orderMap.forEach(
+                    (x , y) ->
+                            System.out.println("orderId : " + x +" order : " + y.toString())
+            );
 
 
 
