@@ -73,11 +73,12 @@ public class UserOrderService {
                         x -> x.userId ,
                         Collectors.summingDouble( x -> x.amount)
                 ));
+
+        totalPaidByUsers.forEach(
+                (x , y) ->
+                        System.out.println("userId : " + x +" TotalAmount : " + y)
+        );
+
     }
-
-
-
-
-
 
 }
