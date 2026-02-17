@@ -126,5 +126,13 @@ public class TreeMethods {
         root.right.right = new TreeNode(7);
 
         System.out.println(levelOrder(root));
+        System.out.println(maxDepth(root));
+        System.out.println(isSame(root, root));
+        TreeNode invertedRoot = invert(root);
+        System.out.println(levelOrder(invertedRoot));
+        System.out.println(isValid(root, Long.MIN_VALUE, Long.MAX_VALUE));
+        System.out.println(lca(root, root.left, root.right).val);
+        System.out.println(checkHeight(root) != -1);
+
     }
 }
