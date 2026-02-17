@@ -42,6 +42,8 @@ public class RevisionForDsa {
         System.out.println(minSubArrayLen(7, new int[] { 2, 3, 1, 2, 4, 3 }));
 
         System.out.println(findMaxAverage(new int[] { 1, 12, -5, -6, 50, 3 }, 4));
+
+        System.out.println(firstUniqChar("leetcode"));
     }
 
     public static int[] twoSum(int[] nums, int target) {
@@ -180,7 +182,7 @@ public class RevisionForDsa {
         return (double) maxSum / k;
     }
 
-    public int firstUniqChar(String s) {
+    public static int firstUniqChar(String s) {
 
         Map<Character, Integer> map = new HashMap<>();
         for (char c : s.toCharArray()) {
