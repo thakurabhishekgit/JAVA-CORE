@@ -34,6 +34,8 @@ public class RevisionForDsa {
         System.out.println(maxSubArray(new int[] { -2, 1, -3, 4, -1, 2, 1, -5, 4 }));
 
         System.out.println(majorityElement(new int[] { 2, 2, 1, 1, 1, 2, 2 }));
+
+        System.out.println(subarraySum(new int[] { 1, 1, 1 }, 2));
     }
 
     public static int[] twoSum(int[] nums, int target) {
