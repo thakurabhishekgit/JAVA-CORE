@@ -35,5 +35,6 @@ public class Hashmap {
         for (HashMap.Entry<Integer, Integer> entry : map1.entrySet()) {
             System.out.println("Key: " + entry.getKey() + ", Value: " + entry.getValue());
         }
+        map.get(1);
     }
 }
