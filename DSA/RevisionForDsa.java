@@ -29,6 +29,7 @@ public class RevisionForDsa {
 
         System.out.println(twoSum(new int[] { 2, 7, 11, 15 }, 9));
 
+        System.out.println(maxProfit(new int[] { 7, 1, 5, 3, 6, 4 }));
     }
 
     public static int[] twoSum(int[] nums, int target) {
@@ -45,5 +46,20 @@ public class RevisionForDsa {
         }
 
         return new int[] {};
+    }
+
+    public static int maxProfit(int[] prices) {
+        int l = 0, r = 1;
+        int res = 0;
+
+        while (r < prices.length) {
+            if (prices[l] < prices[r]) {
+                res = Math.max(res, prices[r] - prices[l]);
+            } else {
+                l = r;
+            }
+            r += 1;
+        }
+        return res;
     }
 }
