@@ -40,6 +40,8 @@ public class RevisionForDsa {
         System.out.println(lengthOfLongestSubstring("abcabcbb"));
 
         System.out.println(minSubArrayLen(7, new int[] { 2, 3, 1, 2, 4, 3 }));
+
+        System.out.println(findMaxAverage(new int[] { 1, 12, -5, -6, 50, 3 }, 4));
     }
 
     public static int[] twoSum(int[] nums, int target) {
