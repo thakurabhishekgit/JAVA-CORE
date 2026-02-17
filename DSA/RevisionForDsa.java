@@ -35,7 +35,7 @@ public class RevisionForDsa {
 
         System.out.println(majorityElement(new int[] { 2, 2, 1, 1, 1, 2, 2 }));
 
-        System.out.println(subarraySum(new int[] { 1, 1, 1 }, 2));
+        System.out.println(subarraySum(new int[] { 1, 0, 1, 0, 1 }, 2));
 
         System.out.println(lengthOfLongestSubstring("abcabcbb"));
 
