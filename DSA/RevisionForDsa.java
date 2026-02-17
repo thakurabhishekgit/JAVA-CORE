@@ -38,6 +38,8 @@ public class RevisionForDsa {
         System.out.println(subarraySum(new int[] { 1, 1, 1 }, 2));
 
         System.out.println(lengthOfLongestSubstring("abcabcbb"));
+
+        System.out.println(minSubArrayLen(7, new int[] { 2, 3, 1, 2, 4, 3 }));
     }
 
     public static int[] twoSum(int[] nums, int target) {
@@ -141,7 +143,7 @@ public class RevisionForDsa {
         return res;
     }
 
-    public int minSubArrayLen(int target, int[] nums) {
+    public static int minSubArrayLen(int target, int[] nums) {
 
         int l = 0;
         int sum = 0;
