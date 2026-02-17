@@ -30,6 +30,8 @@ public class RevisionForDsa {
         System.out.println(twoSum(new int[] { 2, 7, 11, 15 }, 9));
 
         System.out.println(maxProfit(new int[] { 7, 1, 5, 3, 6, 4 }));
+
+        System.out.println(maxSubArray(new int[] { -2, 1, -3, 4, -1, 2, 1, -5, 4 }));
     }
 
     public static int[] twoSum(int[] nums, int target) {
@@ -62,4 +64,19 @@ public class RevisionForDsa {
         }
         return res;
     }
+
+    public static int maxSubArray(int[] nums) {
+        int sum = 0;
+        int ans = nums[0];
+
+        for (int num : nums) {
+            sum += num;
+            ans = Math.max(ans, sum);
+            if (sum < 0) {
+                sum = 0;
+            }
+        }
+        return ans;
+    }
+
 }
