@@ -1,6 +1,6 @@
 package InterviewPrep.Collectionss;
 
-import java.util.HashMap;
+import java.util.*;
 
 public class Hashmap {
     public static void main(String[] args) {
@@ -36,5 +36,9 @@ public class Hashmap {
             System.out.println("Key: " + entry.getKey() + ", Value: " + entry.getValue());
         }
         map.get(1);
+
+        List<Integer> list = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5));
+
+        list.get(0);
     }
 }
