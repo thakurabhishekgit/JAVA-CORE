@@ -27,25 +27,23 @@ public class RevisionForDsa {
 
         // // sum of all elements
 
-        System.out.println(TwoSum(new int[] { 2, 7, 11, 15 }, 9));
+        System.out.println(twoSum(new int[] { 2, 7, 11, 15 }, 9));
 
     }
 
-    public static int[] TwoSum(int[] nums, int target) {
-        HashMap<Integer, Integer> map = new HashMap<>();
-        // for (int num : nums) {
-        // map.put(num, map.getOrDefault(num , 0) + 1);
-        // }
+    public static int[] twoSum(int[] nums, int target) {
+        Map<Integer, Integer> map = new HashMap<>();
 
         for (int i = 0; i < nums.length; i++) {
             int diff = target - nums[i];
 
             if (map.containsKey(diff)) {
                 return new int[] { map.get(diff), i };
-            } else {
-                map.put(nums[i], map.getOrDefault(nums[i], 0) + 1);
             }
+
+            map.put(nums[i], i);
         }
+
         return new int[] {};
     }
 }
