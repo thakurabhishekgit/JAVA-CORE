@@ -66,14 +66,14 @@ public class RevisionForDsa {
         int l = 0, r = 1;
         int res = 0;
 
-        // while (r < prices.length) {
-        // if (prices[l] < prices[r]) {
-        // res = Math.max(res, prices[r] - prices[l]);
-        // } else {
-        // l = r;
-        // }
-        // r += 1;
-        // }
+        while (r < prices.length) {
+            if (prices[l] < prices[r]) {
+                res = Math.max(res, prices[r] - prices[l]);
+            } else {
+                l = r;
+            }
+            r += 1;
+        }
         // for (int i = 0; i < prices.length; i++) {
         // for (int j = i + 1; j < prices.length; j++) {
         // if (prices[i] < prices[j]) {
